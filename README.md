@@ -1,13 +1,12 @@
 # spof-leader-election
 
-No more Single Point Of Failure for scheduled python scripts. Run multiple instances of python script without worrying about duplicacy and failover. It uses etcd for leader-election so that you can run multiple replicas of your script and if leader goes down then only one of the replica will take over and start working. Once the old leader is back, it will join the cluster as a follower.
+No more Single Point Of Failure for scheduled python scripts. Run multiple replicas of python script without worrying about duplicacy and its failover. It uses etcd for leader-election so that you can run multiple replicas of your script and if leader goes down then only one of the replica will take over and start working. Once the old leader is back, it will join the cluster as a follower.
 
 Interesting!!! Keep reading to use it.
 
 ## Getting Started
 
 Importing leader-election.py in your python script will enable that piece of code to run as replicas. It also allows to set customised execution time interval in seconds.
-
 
 
 
@@ -28,6 +27,7 @@ Once you got the requisites on your machine, execute the following command:
 
 ```
 $ pip install -r requirements.txt
+
 ```
 
 This will install all the required libraries for you. 
