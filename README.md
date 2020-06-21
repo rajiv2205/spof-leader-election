@@ -33,9 +33,6 @@ $ pip install -r requirements.txt
 This will install all the required libraries for you. 
 
 
-![Stats Success](/images/docker-ps.png)
-
-
 Execute the following command to run etcd:
 
 ```
