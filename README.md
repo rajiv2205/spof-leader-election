@@ -52,7 +52,7 @@ The above will expose etcd on your host network.
 
 
 ```
-$ python example-spof.py server1 
+$ python example-spof.py server1 python
 
 ```
 
@@ -60,7 +60,7 @@ Open a new terminal and execute the following:
 
 
 ```
-$ python example-spof.py server2
+$ python example-spof.py server2 python
 
 ```
 
@@ -79,6 +79,23 @@ You can change the etcd endpoint as per your need.
 client = etcd3.client(host='localhost', port=2379)
 
 # inside 'leader_election.py'
+
+```
+
+You can also execute shell scripts, following is the example:
+
+```
+$ python example-spof.py server2 shell
+
+```
+
+It executes the shell script (example-shell.sh) when you pass 'shell' as an argument.
+
+To execute your own script, please change the following variable with your command:
+
+```
+# add your shell script command with args
+execute_script = 'bash ./example-shell.sh hello world'
 
 ```
 
